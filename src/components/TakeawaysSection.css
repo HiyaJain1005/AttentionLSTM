@@ -1,0 +1,128 @@
+.takeaways-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.takeaways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.takeaway-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-normal);
+}
+
+.takeaway-card:hover {
+  border-color: var(--card-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px -8px color-mix(in srgb, var(--card-color) 25%, transparent);
+}
+
+.takeaway-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.takeaway-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.takeaway-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.takeaway-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.takeaway-card:hover .takeaway-accent {
+  transform: scaleX(1);
+}
+
+/* Summary */
+.summary-box {
+  text-align: center;
+  padding: 48px 40px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: var(--radius-xl);
+  margin-bottom: 64px;
+}
+
+.summary-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.summary-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.summary-text strong {
+  color: var(--text-primary);
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding-top: 32px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-primary);
+  margin: 0 auto 24px;
+  border-radius: 1px;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.footer-credit {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .takeaways-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-box {
+    padding: 32px 24px;
+  }
+}

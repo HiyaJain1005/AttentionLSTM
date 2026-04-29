@@ -1,0 +1,9 @@
+.nav-logo {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,144 @@
+.attention-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.attention-viz-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.attention-connections-area {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.attention-svg {
+  width: 100%;
+  height: 100px;
+}
+
+.attention-tokens-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 24px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.attention-token-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.attention-token-wrap.focus-token .token {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-purple);
+  box-shadow: var(--glow-purple);
+}
+
+.weight-bar-container {
+  width: 60px;
+  height: 3px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.weight-bar {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.weight-label {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.attention-controls {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.control-group {
+  flex: 1;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.current-focus {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.focus-badge {
+  display: inline-block;
+  padding: 2px 12px;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 100px;
+  color: var(--accent-purple);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.slider-control {
+  flex: 1;
+}
+
+.slider-value {
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.attention-insight {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+.attention-insight strong {
+  color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+  .attention-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .attention-tokens-row {
+    gap: 4px;
+    padding: 16px 12px;
+  }
+}
