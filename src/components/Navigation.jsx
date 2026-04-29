@@ -4,6 +4,7 @@ import './Navigation.css';
 
 const NAV_ITEMS = [
   { id: 'hook', label: 'Intro' },
+  { id: 'word-web', label: 'Word Web' },
   { id: 'lstm', label: 'LSTM' },
   { id: 'attention', label: 'Attention' },
   { id: 'comparison', label: 'Compare' },

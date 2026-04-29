@@ -1,6 +1,7 @@
 import { AppProvider } from './context/AppContext';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
+import WordWebSection from './components/WordWebSection';
 import LSTMSection from './components/LSTMSection';
 import AttentionSection from './components/AttentionSection';
 import ComparisonSection from './components/ComparisonSection';
@@ -18,6 +19,7 @@ function App() {
         <Navigation />
         <main>
           <HeroSection />
+          <WordWebSection />
           <LSTMSection />
           <AttentionSection />
           <ComparisonSection />
