@@ -6,7 +6,7 @@
 
 ## 📌 Live Demo
 
-Open `attention.html` directly in any modern browser — no build step, no server, no dependencies.
+ `https://attention-lstm.vercel.app/` 
 
 ---
 
@@ -225,10 +225,6 @@ To add game rounds, add objects to the `gameRounds` array:
 
 ## 👩‍💻 Author
 
-Built as an interactive educational experience for explaining the Attention mechanism in NLP.
+Hiya Jain, Nayana Dinesh and Sanchita Maharana
 
 ---
-
-## 📄 License
-
-MIT License — free to use, modify, and share.
