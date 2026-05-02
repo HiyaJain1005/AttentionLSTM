@@ -166,14 +166,14 @@ const WordWebSection = () => {
       ctx.moveTo(n1.x, n1.y);
       ctx.lineTo(n2.x, n2.y);
       const colorInt = isActiveEdge ? (edge.strength > 0.6 ? 280 : 200) : 200;
-      ctx.strokeStyle = \`hsla(\${colorInt}, 80%, 65%, \${opacity})\`;
+      ctx.strokeStyle = `hsla(${colorInt}, 80%, 65%, ${opacity})`;
       ctx.lineWidth = isActiveEdge ? edge.strength * 4 : Math.max(1, edge.strength * 2);
       ctx.stroke();
       
       if (isActiveEdge && edge.strength > 0.2) {
         const mx = (n1.x + n2.x) / 2;
         const my = (n1.y + n2.y) / 2;
-        ctx.fillStyle = \`rgba(255,255,255,\${opacity + 0.2})\`;
+        ctx.fillStyle = `rgba(255,255,255,${opacity + 0.2})`;
         ctx.font = '11px JetBrains Mono';
         ctx.textAlign = 'center';
         ctx.fillText(Math.round(edge.strength * 100) + '%', mx, my - 5);
@@ -199,20 +199,20 @@ const WordWebSection = () => {
       
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-      ctx.fillStyle = \`hsla(\${n.hue}, 80%, 15%, \${opacity})\`;
+      ctx.fillStyle = `hsla(${n.hue}, 80%, 15%, ${opacity})`;
       ctx.fill();
       ctx.lineWidth = isActive ? 3 : 2;
-      ctx.strokeStyle = \`hsla(\${n.hue}, 80%, \${isActive ? 80 : 65}%, \${opacity})\`;
+      ctx.strokeStyle = `hsla(${n.hue}, 80%, ${isActive ? 80 : 65}%, ${opacity})`;
       ctx.stroke();
       
       if (isActive) {
-        ctx.shadowColor = \`hsla(\${n.hue}, 80%, 65%, 0.8)\`;
+        ctx.shadowColor = `hsla(${n.hue}, 80%, 65%, 0.8)`;
         ctx.shadowBlur = 15;
         ctx.stroke();
         ctx.shadowBlur = 0;
       }
       
-      ctx.fillStyle = \`rgba(255,255,255,\${opacity})\`;
+      ctx.fillStyle = `rgba(255,255,255,${opacity})`;
       ctx.font = '13px JetBrains Mono';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
